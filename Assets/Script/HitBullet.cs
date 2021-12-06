@@ -18,4 +18,12 @@ public class HitBullet : MonoBehaviour
             Destroy(gameObject);
         }*/
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Debug.Log("弾が敵に衝突");
+            Destroy(collision.gameObject);
+        }
+    }
 }
