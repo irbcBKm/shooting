@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class HitBullet : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject Enemy;
+    private float EnemyHP;
+        // Start is called before the first frame update
     void Start()
     {
-        
+        EnemyHP = 100;
     }
 
     // Update is called once per frame
     void Update()
     {
-       /* if(collision.gameObject.CompareTag("Enemy"))
+        if(EnemyHP <= 0)
         {
-            Destroy(gameObject);
-        }*/
+            Destroy(Enemy);
+            Debug.Log("敵が倒れた");
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -24,6 +27,7 @@ public class HitBullet : MonoBehaviour
         {
             Debug.Log("弾が敵に衝突");
             Destroy(collision.gameObject);
+            EnemyHP -= 10;
         }
     }
 }
