@@ -21,12 +21,12 @@ public class MoveMe : MonoBehaviour
         //左回転
         if (Input.GetKey (KeyCode.A)) 
         {
-            transform.Rotate (0.0f,-2.0f,0.0f);
+            transform.Rotate (0.0f,-1.0f,0.0f);
         }
         // 右回転
         if (Input.GetKey (KeyCode.D)) 
         {
-            transform.Rotate (0.0f,2.0f,0.0f);
+            transform.Rotate (0.0f,1.0f,0.0f);
         }
         // 前進
         if (Input.GetKey (KeyCode.W)) 
