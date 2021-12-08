@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HitBullet : MonoBehaviour
 {
     public GameObject Enemy;
+    public Slider sliderHP;
     private float EnemyHP;
         // Start is called before the first frame update
     void Start()
     {
         EnemyHP = 100;
+        sliderHP.value = 1;
     }
 
     // Update is called once per frame
@@ -28,6 +31,8 @@ public class HitBullet : MonoBehaviour
             Debug.Log("弾が敵に衝突");
             Destroy(collision.gameObject);
             EnemyHP -= 10;
+            sliderHP.value = EnemyHP/100;
+            Debug.Log("HPバーとHPを同期");
         }
     }
 }
