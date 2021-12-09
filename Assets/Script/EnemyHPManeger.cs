@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HitBullet : MonoBehaviour
+public class EnemyHPManeger : MonoBehaviour
 {
     public GameObject Enemy;
     public Slider sliderHP;
@@ -32,7 +32,6 @@ public class HitBullet : MonoBehaviour
             Destroy(collision.gameObject);
             EnemyHP -= 10;
             sliderHP.value = EnemyHP/100;
-            Debug.Log("HPバーとHPを同期");
         }
     }
 }

@@ -398,7 +398,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 209580745}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 203cd802141d3e842914b5caf16216a7, type: 3}
+  m_Script: {fileID: 11500000, guid: e6a572830941ebe41bc9ddbf4348cf5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1855885865}
@@ -724,7 +724,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &468712157
 MonoBehaviour:
@@ -1314,7 +1314,7 @@ GameObject:
   - component: {fileID: 871915323}
   - component: {fileID: 871915324}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: PlayerSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1386,9 +1386,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 81
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1469,7 +1469,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: 0, y: 10, z: -3}
+  m_LocalPosition: {x: 0, y: 10, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2010375977}
@@ -1700,8 +1700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 2.5, y: 0}
+  m_SizeDelta: {x: -5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1319212276
 GameObject:
@@ -1852,6 +1852,7 @@ GameObject:
   - component: {fileID: 1650517410}
   - component: {fileID: 1650517413}
   - component: {fileID: 1650517412}
+  - component: {fileID: 1650517414}
   - component: {fileID: 1650517411}
   m_Layer: 0
   m_Name: Cube
@@ -1936,6 +1937,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650517409}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1650517414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650517409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3f78140d7126e419754887145df454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerHPS: {fileID: 871915324}
 --- !u!1 &1732926087
 GameObject:
   m_ObjectHideFlags: 0
