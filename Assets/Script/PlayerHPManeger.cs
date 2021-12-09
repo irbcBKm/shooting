@@ -20,13 +20,12 @@ public class PlayerHPManeger : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("EnemyBullet"))
         {
             Debug.Log("弾が自分に衝突");
             Destroy(collision.gameObject);
             PlayerHP -= 10;
             PlayerHPS.value = PlayerHP/100;
-            Debug.Log("HPバーとHPを同期");
         }
     }
 }
