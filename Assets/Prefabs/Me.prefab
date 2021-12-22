@@ -323,7 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3f78140d7126e419754887145df454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHPS: {fileID: 0}
+  PlayerHPS: {fileID: 361330345441127486, guid: c470194828023fd4aa700d33b6081c66,
+    type: 3}
 --- !u!65 &105889525558896462
 BoxCollider:
   m_ObjectHideFlags: 0
