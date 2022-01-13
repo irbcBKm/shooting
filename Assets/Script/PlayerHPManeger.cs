@@ -19,7 +19,7 @@ public class PlayerHPManeger : MonoBehaviour
     {
         if (Input.GetKeyDown("u"))
         {
-            PlayerHP -= 10;//スライダーとgameover処理の確認用
+            PlayerHP -= 20;//スライダーとgameover処理の確認用
         }
         if (PlayerHP <= 0)
         {
