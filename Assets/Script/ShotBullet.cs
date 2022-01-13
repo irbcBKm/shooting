@@ -30,6 +30,6 @@ public class ShotBullet : NetworkBehaviour
         var bullet = Instantiate(m_bullet,m_shotPoint.position,m_shotPoint.rotation);
 
         bullet.GetComponent<NetworkObject>().SpawnWithOwnership(rpcParams.Receive.SenderClientId);
-        bullet.GetComponent<Rigidbody>().velocity = 20f*m_shotPoint.forward;
+        bullet.GetComponent<Rigidbody>().velocity = 20f * m_shotPoint.forward;
     }
 }
