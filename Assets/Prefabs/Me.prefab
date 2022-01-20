@@ -253,8 +253,9 @@ GameObject:
   - component: {fileID: -5739317619023816794}
   - component: {fileID: 5203119403384643053}
   - component: {fileID: 3296359449168287395}
-  - component: {fileID: 800331274222477799}
   - component: {fileID: 4809011492226990180}
+  - component: {fileID: -8289990618817867002}
+  - component: {fileID: -1887804611915477827}
   m_Layer: 0
   m_Name: Me
   m_TagString: Untagged
@@ -352,20 +353,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &800331274222477799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105889525786240458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49b9879f4e5ae574c9d6c84a2f750030, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_moveSpeed: 10
-  m_rotateSpeed: 150
 --- !u!114 &4809011492226990180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +367,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bullet: {fileID: 713241768657034903, guid: ba89c5a1ddf2cfa4689c6cc307c50cc4, type: 3}
   m_shotPoint: {fileID: 105889524335597706}
+--- !u!114 &-8289990618817867002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105889525786240458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b9879f4e5ae574c9d6c84a2f750030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_moveSpeed: 10
+  m_rotateSpeed: 150
+--- !u!114 &-1887804611915477827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105889525786240458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c187c83d39926449d96bbb4fa90cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_offset: {x: 0, y: 10, z: -8}
 --- !u!1 &5878620408397864142
 GameObject:
   m_ObjectHideFlags: 0

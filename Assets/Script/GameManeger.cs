@@ -8,7 +8,6 @@ public class GameManeger : MonoBehaviour
 {
     public Text timeText;
     public float gametime = 60f;
-    int second;
     // Start is called before the first frame update
     void Start()
     {
