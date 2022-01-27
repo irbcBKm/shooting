@@ -4,12 +4,7 @@ using Unity.Netcode;
 public class M_Bullet : NetworkBehaviour 
 {
     public float Damage{get;} =20f;
-    [SerializeField]
-    private float speed;
-    void Update()
-    {
-        this.transform.Translate(Vector3.forward * Time.deltaTime * speed);
-    }
+ 
     public override void OnNetworkSpawn()
     {
         GetComponent<Collider>().isTrigger = true;
@@ -23,6 +18,13 @@ public class M_Bullet : NetworkBehaviour
     {
         if(!IsServer)return;
         Despawn();
+
+        if(!other.attachedRigidbody)return;
+
+        var playerHealth = other.attachedRigidbody.GetComponent<PlayerHealthController>();
+        if(playerHealth){
+            playerHealth.TakeDamage(Damage);
+        }
     }
     private void Despawn()
     {

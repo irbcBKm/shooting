@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
 
@@ -9,11 +7,6 @@ public class ShotBullet : NetworkBehaviour
     private GameObject m_bullet;
     [SerializeField]//インスペクターへの表示
     private Transform m_shotPoint;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -21,11 +14,11 @@ public class ShotBullet : NetworkBehaviour
         if(!IsOwner)return;
         if (Input.GetKeyDown(KeyCode.Z)||Input.GetKeyDown(KeyCode.Space))
         {
-            shotServerRpc();
+            ShotServerRpc();
         }
     }
     [ServerRpc]
-    void shotServerRpc(ServerRpcParams rpcParams = default)
+    private void ShotServerRpc(ServerRpcParams rpcParams = default)
     {
         var bullet = Instantiate(m_bullet,m_shotPoint.position,m_shotPoint.rotation);
 
