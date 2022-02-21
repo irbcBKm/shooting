@@ -15,7 +15,7 @@ public class PlayerHealthController : NetworkBehaviour {
     public void TakeDamage(float value){
         var health = Health - value;
         Health = Mathf.Max(0f,health);
-        if(health <= 0){
+        if(HealthNetVar.Value <= 0){
             if(!IsOwner)return;
             var resultcontll = GetComponent<ResultManager>();
             resultcontll.lose();

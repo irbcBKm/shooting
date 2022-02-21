@@ -24,8 +24,8 @@ public class TimeManager : NetworkBehaviour
         timeText.text = gametime.Value.ToString("F2");
         if (gametime.Value <= 0)
         {
-            /*var resultcontll = GetComponent<ResultManager>();
-            resultcontll.draw();*/
+            /*var resultcontroll = GetComponent<ResultManager>();
+            resultcontroll.draw();*/
             Gameover();
         }
         if(GameEnd.Value){
