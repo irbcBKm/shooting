@@ -233,6 +233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33563dbccfd44846bafc9b903c62e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameEnd:
+    m_InternalValue: 0
   timeText: {fileID: 22965249}
   PlayTime: 0
   TimerSteartButton: {fileID: 118587391}
@@ -786,6 +788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758648352}
   - component: {fileID: 758648353}
+  - component: {fileID: 758648354}
   m_Layer: 0
   m_Name: GameManeger
   m_TagString: Untagged
@@ -822,6 +825,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_startHostButton: {fileID: 665330753}
   m_startClientButton: {fileID: 1854335750}
+--- !u!114 &758648354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758648350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9892fdb33190b7e46bc5f080c41a4345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  result: 0
 --- !u!1 &851292505
 GameObject:
   m_ObjectHideFlags: 0

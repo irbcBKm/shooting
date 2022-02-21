@@ -16,8 +16,11 @@ public class PlayerHealthController : NetworkBehaviour {
         var health = Health - value;
         Health = Mathf.Max(0f,health);
         if(health <= 0){
+            if(!IsOwner)return;
+            var resultcontll = GetComponent<ResultManager>();
+            resultcontll.lose();
             var losePlayer = GetComponent<TimeManager>();
-            losePlayer.Loser();
+            losePlayer.GameEnderServerRpc();
         }
     }
     #endregion
